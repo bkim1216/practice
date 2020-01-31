@@ -1,0 +1,18 @@
+while True:
+
+   user1 = input("rock paper scissors: ").lower()
+   user2 = input("rock paper scissors: ").lower()
+
+   rock = 1
+   paper = 2
+   scisscors = 3
+
+   user1 = rock
+
+   if  user2 == 1:
+       print("it's a tie")
+   elif user2 == 2:
+       print("user2 won")
+   else:
+       print("user1 won")
+      
