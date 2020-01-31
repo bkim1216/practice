@@ -2,32 +2,33 @@ print("This is Rock Scissors Paper game. Ready?")
 
 user1 = input("What's your name?: ")
 user2 = input("and yours?: ")
-u1 = str(input(f"Okay, {user1}. What's your choice?: ")).lower()
-u2 = str(input(f"and {user2}? ")).lower()
+u1 = input(f"Okay, {user1}. What's your choice?: ").lower()
+u2 = input(f"and {user2}? ").lower()
 
 a = "rock"
 b = "paper"
 c = "scissors"
 
 def compare(u1, u2):
-   if u1 == u2:
-       return ("it's a tie")
-   elif u1 == a :
-       if u2 == b :
-           return(f"{user2} won")
-       else u2 == c :
-           return(f"{user1} won")
-   elif u1 == c :
-       if u2 == a :
-           return (f"{user1} won")
-       else u2 == b :
-           return(f"{user2} won")
-   elif u1 == b :
-       if u2 == a :
-           return(f"{user2} won")
-       else u2 == c :
-           return (f"{user1} won")
-   else:
-       return("Told you this is rock paper scissors game. try again")
+    if u1 == u2:
+        return ("it's a tie")
+    elif u1 == a :
+        if u2 == b :
+            return(f"{user2} won")
+        elif u2 == c :
+            return(f"{user1} won")
+    elif u1 == c :
+        if u2 == a :
+            return (f"{user1} won")
+        elif u2 == b :
+            return(f"{user2} won")
+    elif u1 == b :
+        if u2 == a :
+            return(f"{user2} won")
+        elif u2 == c :
+            return (f"{user1} won")
+    else:
+        return("Told you this is rock paper scissors game. try again")
 
-print(comapre(u1,u2))
+
+print(compare(u1, u2))
