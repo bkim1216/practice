@@ -1,0 +1,22 @@
+a = float(input("type any number: "))
+print( """Your options: +, -, *, %, /, **""")
+op = input("operation?")
+b = float(input("type another number: "))
+
+if op == "+":
+   print(a + b)
+
+if op == "-":
+   print(a - b)
+
+if op =="*":
+   print(a * b)
+
+if op == "%":
+   print(a % b)
+
+if op == "/":
+   print(a / b)
+
+if op == "**":
+   print(a ** b)
