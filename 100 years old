@@ -1,0 +1,5 @@
+
+name = input("your name is: " )
+age = int(input("how old are you: "))
+years = 100 - age
+print(f"{name} is going to be 100 years old in {years} years.")
