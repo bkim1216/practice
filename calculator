@@ -1,0 +1,28 @@
+a = float()
+b = float()
+
+def plus(a, b):
+  return a + b
+
+def minus(a, b):
+ return a - b
+
+def mult(a, b):
+  return a * b
+
+def reminder(a, b):
+  return a % b
+
+def div(a, b):
+  return a / b
+
+def power(a, b):
+  return a ** b
+
+
+print(plus(2,3))
+print(minus(3, 4))
+print(mult(3, 6))
+print(reminder(6, 3))
+print(div("2",6))
+print(power(6,2))
