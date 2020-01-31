@@ -1,7 +1,10 @@
 number = int(input("Input a number: "))
-if number % 2 == 0:
-   print("You put even number" and f"{number} is even number")
-elif number %2 ==0 and number % 4 ==0:
-   print("Reminder is 0 when you devide the number by 4")
+
+if  number % 4 ==0:
+  print("Reminder is 0 when you devide the number by 4")
+
+elif number % 2 == 0:
+  print("You put even number" and f"{number} is even number")
+
 else:
-   print("you put odd number")
+  print("you put odd number")
