@@ -1,28 +1,22 @@
-a = float()
-b = float()
+a = float(input("type any number: "))
+print( """Your options: +, -, *, %, /, **""")
+op = input("operation?")
+b = float(input("type another number: "))
 
-def plus(a, b):
-  return a + b
+if op == "+":
+   print(a + b)
 
-def minus(a, b):
- return a - b
+if op == "-":
+   print(a - b)
 
-def mult(a, b):
-  return a * b
+if op =="*":
+   print(a * b)
 
-def reminder(a, b):
-  return a % b
+if op == "%":
+   print(a % b)
 
-def div(a, b):
-  return a / b
+if op == "/":
+   print(a / b)
 
-def power(a, b):
-  return a ** b
-
-
-print(plus(2,3))
-print(minus(3, 4))
-print(mult(3, 6))
-print(reminder(6, 3))
-print(div("2",6))
-print(power(6,2))
+if op == "**":
+   print(a ** b)
