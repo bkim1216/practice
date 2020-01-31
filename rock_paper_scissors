@@ -1,18 +1,33 @@
-while True:
+print("This is Rock Scissors Paper game. Ready?")
 
-   user1 = input("rock paper scissors: ").lower()
-   user2 = input("rock paper scissors: ").lower()
+user1 = input("What's your name?: ")
+user2 = input("and yours?: ")
+u1 = str(input(f"Okay, {user1}. What's your choice?: ")).lower()
+u2 = str(input(f"and {user2}? ")).lower()
 
-   rock = 1
-   paper = 2
-   scisscors = 3
+a = "rock"
+b = "paper"
+c = "scissors"
 
-   user1 = rock
-
-   if  user2 == 1:
-       print("it's a tie")
-   elif user2 == 2:
-       print("user2 won")
+def compare(u1, u2):
+   if u1 == u2:
+       return ("it's a tie")
+   elif u1 == a :
+       if u2 == b :
+           return(f"{user2} won")
+       else u2 == c :
+           return(f"{user1} won")
+   elif u1 == c :
+       if u2 == a :
+           return (f"{user1} won")
+       else u2 == b :
+           return(f"{user2} won")
+   elif u1 == b :
+       if u2 == a :
+           return(f"{user2} won")
+       else u2 == c :
+           return (f"{user1} won")
    else:
-       print("user1 won")
-      
+       return("Told you this is rock paper scissors game. try again")
+
+print(comapre(u1,u2))
