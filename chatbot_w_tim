@@ -1,0 +1,48 @@
+from socket import AF_INET, socket, SOCK_STREAM
+from threading import Thread
+
+BUFSIZ = 512
+
+def client_communication(client):
+    run = True:
+    while run:
+        msg = client.recv(BUFSIZ)
+        if msg == bytes("{quit", "utf8")
+            client.close()
+        else:
+
+
+
+def wait_for_connection(SERVER):
+    """
+    Wait for connection from new clients, start new thread once connected
+    :param SERVER: SOCKET
+    :return: NONE
+    """
+    run = True
+    while run:
+        try:
+            client, addr = SERVER.accept()
+            Thread(target=handle_client, args=(client,)).start()
+        except Exception as e:
+            print("[]FAILURE", e)
+            run = False
+
+#GLOBAL VARIALES
+HOST = 'localhost'
+PORT = 5500
+BUFSIZ = 512
+ADDR = (HOST, PORT)
+MAX_CONNECTION = 10
+
+SERVER = socket(AF_INET, SOCK_STREAM)
+SERVER.bind(ADDR)
+
+
+if __name__ == "__main__":
+    SERVER.listen(MAX_CONNECTION)  # Listen for connections
+    print("Waiting for connection...")
+    ACCEPT_THREAD = Thread(target=wait_for_connection, ())
+    ACCEPT_THREAD.start()  # Starts the infinite loop.
+    ACCEPT_THREAD.join()
+    SERVER.close()
