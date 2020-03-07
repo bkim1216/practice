@@ -1,0 +1,23 @@
+player1 = input('Rock paper Scissors? ')
+player2 = input('Rock paper Scissors? ')
+
+def game(player1, player2):
+    if player1 == player2:
+        return('it is a tie')
+    elif player1 == 'rock':
+        if player2 == 'paper':
+            return('player1 lost')
+        else:
+            return('player1 won')
+    elif player1 == 'paper':
+        if player2 == 'rock':
+            return('player1 won')
+        else:
+            return('player1 lost')
+    elif player1 == 'scissors':
+        if player2 == 'rock':
+            return('player1 lost')
+        else:
+            return('player1 won')
+
+print(game(player1, player2))
