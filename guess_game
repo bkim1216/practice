@@ -1,0 +1,23 @@
+import random
+
+number = random.randint(1,9)
+guess = 0
+count = 0
+
+while guess != number and guess != 'exit':
+    guess = input('guess your number ')
+
+    if guess == 'exit':
+        print('Done')
+        break
+
+    guess = int(guess)
+    count += 1
+
+    if guess > number:
+        print('it is too high')
+    elif guess < number:
+        print('it is too low')
+    else:
+        print('you got it')
+        print(f'you tried {count} times')
