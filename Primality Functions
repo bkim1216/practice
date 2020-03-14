@@ -1,5 +1,5 @@
 number = int(input('what is your lucky number? '))
-dividors = range(2, number)
+dividers = range(2, number)
 
 def get_prime_number(number):
         if number == 0 or number == 1:
@@ -7,8 +7,8 @@ def get_prime_number(number):
         elif number == 2:
             return '2 is a prime number'
 
-        for dividor in dividors:
-            if number % dividor == 0:
+        for divider in dividers:
+            if number % divider == 0:
                 return f"{number} is not a prime number"
             else:
                 return f"{number} is a prime number"
