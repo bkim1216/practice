@@ -1,13 +1,16 @@
 number = int(input('what is your lucky number? '))
-dividors = range(1, number + 1)
+dividors = range(2, number)
 
 def get_prime_number(number):
-    for dividor in dividors:
-        if number == 0 or 1:
+        if number == 0 or number == 1:
             return 'try again'
-        elif number % dividor == 0:
-            return "you chose prime number"
-        else:
-            return f"{number} is not prime number"
+        elif number == 2:
+            return '2 is a prime number'
+
+        for dividor in dividors:
+            if number % dividor == 0:
+                return f"{number} is not a prime number"
+            else:
+                return f"{number} is a prime number"
 
 print(get_prime_number(number))
