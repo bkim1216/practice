@@ -2,11 +2,11 @@ number = int(input('what is your lucky number? '))
 dividers = range(2, number)
 
 def get_prime_number(number):
-        if number == 0 or number == 1:
-            return 'try again'
-        elif number == 2:
-            return '2 is a prime number'
-
+    if number == 0 or number == 1:
+        return 'try again'
+    elif number == 2:
+        return '2 is a prime number'
+    else:
         for divider in dividers:
             if number % divider == 0:
                 return f"{number} is not a prime number"
