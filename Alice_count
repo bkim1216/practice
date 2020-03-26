@@ -14,3 +14,14 @@ def count_letter(letter):
     print(f"{letter} is {count} times in Alice in wonderland")
 
 count_letter(letter='a')
+
+
+def count_letter(word):
+    path = '/Users/youngmikim/Desktop/python/homework/alice_in_wonderland.txt'
+
+    with open(path, 'r') as infile, open(path, 'w')as outfile:
+        for line in infile:
+             outfile.write(line.replace(word, 'Monster hunter'))
+        outfile.readlines()
+
+count_letter('Alice')
