@@ -1,0 +1,16 @@
+def count_letter(letter):
+    path = '/Users/youngmikim/Desktop/python/homework/alice_in_wonderland.txt'
+    alice_f = open(path, 'r')
+    alice = alice_f.readlines()
+    count = 0
+
+    for line in alice:
+        line = line.lower()
+        for char in line:
+            if char == letter:
+                count += 1
+    alice_f.close()
+
+    print(f"{letter} is {count} times in Alice in wonderland")
+
+count_letter(letter='a')
