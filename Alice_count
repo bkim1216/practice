@@ -25,3 +25,18 @@ def change_letter(word):
              outfile.write(line.replace(word, 'Monster hunter'))
 
 change_letter('Alice')
+
+
+
+def change_word(word):
+    path = '/Users/youngmikim/Desktop/python/homework/alice_in_wonderland.txt'
+    fin = open(path, "rt")
+    data = fin.read()
+    data = data.replace('Alice', 'Pillow friend')
+    fin.close()
+    fin = open(path, "wt")
+    fin.write(data)
+    fin.close()
+
+change_word('Alice')
+
