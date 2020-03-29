@@ -1,0 +1,30 @@
+import random
+
+class enemy:
+    atkl = 60
+    atkh = 80
+
+    def getAtk(self):
+        print(self.atkl)
+
+enemy1 = enemy()
+enemy1.getAtk()
+
+playerhp = 260
+enemyatkl = 60
+enemyatkh = 80
+
+while playerhp > 0:
+    dmg = random.randrange(enemyatkl, enemyatkh)
+    playerhp = playerhp - dmg
+
+    if playerhp <= 30:
+        playerhp = 30
+    else:
+        print("Enermy strikes for", dmg, "points of damage. Current HP is", playerhp)
+
+    if playerhp > 30:
+        continue
+
+    print("You have low")
+    break
